@@ -1,231 +1,212 @@
-# 🌌 ModderUI — Deep Blue Liquid Glass UI Framework  
-**Version:** 3.0  
-**Theme:** macOS/iOS Native Dark Mode • 3D Interactive UI • Liquid Glass  
+# 🌌 ModderUI + ModderOS Core  
+### **Deep Blue Liquid Glass UI Framework with Auto-Inject System Engine**  
+**Version:** 4.0  
 **Author:** @modderboy  
 
-ModderUI is a fully custom, ultra-modern UI framework designed to bring **liquid glass**, **macOS-inspired components**, and **electric blue gradients** into any web project.  
-It is lightweight, powerful, and highly visual — perfect for dashboards, super apps, authentication systems, and ModderOS ecosystem projects.
+ModderUI is a next-generation Liquid Glass UI kit designed for premium dashboards, super-apps, and macOS/iOS-inspired systems.  
+ModderOS Core is the JavaScript engine that powers menus, modals, context actions, system clock, auto-inject features, and desktop-like interactions.
+
+Together they form a complete **UI + UX System Framework**.
 
 ---
 
 # 🇬🇧 English Version
 
-## ✨ Features
-- Liquid Glass UI (blur, glass, glow, gradients)  
-- Fully interactive 3D Components (cards, hover zones, tilt effects)  
-- macOS/iOS-inspired Menubar, Sidebar, Context Menu  
-- Dynamic Electric Blue color palette  
-- Responsive layout grid system  
-- Modal system with smooth scaling animations  
-- Floating Dock (iOS/macOS style)  
-- Calendar widget (v3)  
-- Loading components (WiFi Loader v2)  
-- Full Dark Mode by default  
-- Strict variable-driven theming  
-- Auto-adaptive shadows & glow  
+## ✨ Features (UI Layer — ModderUI)
+- Liquid Glass components (blur, gradients, glow)
+- macOS/iOS-style top bar & sidebar  
+- 3D interactive card engine  
+- Floating Dock (iOS-style)  
+- Calendar widget  
+- WiFi Loader (animated)  
+- Modal system with smooth scale animations  
+- Native Dark Mode  
+- Full palette + variable-driven theming  
+- Responsive grid system  
+- Neumorphic + glass hybrid effects  
 
 ---
 
-## 📦 Folder Structure
+## ⚙️ Features (System Layer — ModderOS Core JS Engine)
+- Auto-inject menus (context & edit menu, even if HTML doesn’t contain them)  
+- Error-free initialization (null checks everywhere)  
+- Smart Context Menu (right-click tracking + bounds checking)  
+- Smart Edit Menu (selection tracking + position auto alignment)  
+- Modal Controller (open / close with animations)  
+- System Clock rendering  
+- Password visibility toggle  
+- Global click handler for UI cleanup  
+- App toggle endpoint support (Django-ready)  
+- CSRF-safe requests  
+
+---
+
+# 📦 Folder Structure
+
 ```
 modderui/
 │
-├── modderui.css      # Full UI Framework (this file)
+├── modderui.css          # Full CSS UI Framework
+├── main.js               # ModderOS Core System Engine
 ├── README.md
 └── demo/
-    └── index.html     # Example usage
+    └── index.html        # Live example
 ```
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-### Option 1 — Direct Link
+### 1. Add CSS
 ```html
 <link rel="stylesheet" href="modderui.css">
 ```
 
-### Option 2 — Import into Django / Flask
-```
-static/
- └── css/
-      └── modderui.css
+### 2. Add JS
+```html
+<script src="main.js" defer></script>
 ```
 
-Then:
-
+### 3. Django Example
 ```django
 <link href="{% static 'css/modderui.css' %}" rel="stylesheet">
+<script src="{% static 'js/main.js' %}" defer></script>
 ```
 
 ---
 
-## 🧪 Usage Example
+# 🧪 Usage Examples
 
-### Basic Glass Card
+## Glass Card
 ```html
 <section class="card">
     <h1>Welcome to ModderUI</h1>
-    <p>Liquid glass interface activated.</p>
 </section>
 ```
 
-### Button
+## Primary Button
 ```html
 <button class="primary">Continue</button>
 ```
 
-### Sidebar Item
+## Floating Dock
 ```html
-<div class="nav-item active">
-    <span>Dashboard</span>
+<div class="floating-dock">
+    <div class="dock-icon active">🏠</div>
+    <div class="dock-icon">⚙️</div>
 </div>
 ```
 
-### Modal
+## Context Menu (Auto Injected)
+No HTML needed.  
+The JS engine creates it automatically.
+
+## Modal Trigger
 ```html
-<div class="modal-overlay" id="modal">
-    <div class="modal-content">
-        <h2>Modal Title</h2>
-        <p>Some text inside modal.</p>
-    </div>
-</div>
+<button onclick="toggleModal('settingsModal')">Open Settings</button>
 ```
 
 ---
 
-## 🎨 Color Variables
-ModderUI uses a strict palette system:
+# 🔧 System Engine API (ModderOS Core)
 
-```
---c-black: #02010a;
---c-prussian: #04052e;
---c-twilight: #140152;
---c-navy: #22007c;
+## `toggleModal(id)`
+Opens or closes a modal with animated scaling.
+
+## `getCookie(name)`
+Django-compatible CSRF cookie extraction.
+
+## Auto-Injected Menus
+Generated if missing:
+
+### Context Menu:
+- Refresh  
+- Back  
+- Settings  
+- Logout  
+
+### Edit Menu:
+- Copy  
+- Paste  
+- Cut  
+
+No HTML required — system engine handles everything.
+
+---
+
+# 🎨 Theming
+
+Modify palette via CSS root variables:
+
+```css
 --c-electric: #0d00a4;
+--c-navy: #22007c;
+--glass-blur: blur(30px);
 ```
 
-Glass engine:
-
-```
---glass-bg-base
---glass-bg-hover
---glass-border
---glass-shadow
---glass-blur
-```
+All components inherit theme automatically.
 
 ---
 
-## 🧩 Components Included
-| Component | Status | Description |
-|----------|--------|-------------|
-| macOS Menubar | ✔️ | Fully dynamic top menu |
-| Liquid Sidebar | ✔️ | iPadOS/MacOS style |
-| 3D Card Engine | ✔️ | 25-zone rotation grid |
-| WiFi Loader | ✔️ | Liquid animated loader |
-| Modal System | ✔️ | Scale-in glass modal |
-| Calendar Widget | ✔️ | Customizable |
-| Floating Dock | ✔️ | iOS bottom dock |
-| Context Menu | ✔️ | Glass context panel |
-
----
-
-## 🔥 Why ModderUI?
-- Built for **high-end dashboards**  
-- Designed for **ModderOS ecosystem**  
-- Next-gen UI feeling without heavy JS  
-- Perfect for:  
-  - Admin panels  
-  - SaaS dashboards  
-  - Super apps  
-  - Authentication UIs  
-  - Web apps & mini apps  
+# 📊 Suitable For:
+- Super Apps  
+- Admin Panels  
+- Dashboards  
+- Authentication Systems  
+- Desktop-like Web Apps  
+- ModderOS ecosystem  
 
 ---
 
 # 🇺🇿 O‘zbekcha Versiya
 
-## ✨ Xususiyatlari
-- Liquid Glass UI (blur + shaffof + gradient)  
-- 3D hover effektlar (kartalar, konteynerlar)  
-- macOS/iOS uslubidagi menyu bar & sidebar  
-- Electric Blue palitra (Modder-style)  
-- Grid systema (auto responsive)  
-- Modal tizimi (smooth scale animation)  
-- WiFi Loader — animatsion yuklovchi  
-- Floating Dock — iOS style  
-- Kalendar widget  
+## ✨ UI Xususiyatlari (ModderUI)
+- Liquid Glass dizayn (blur + shaffof)  
+- macOS/iOS uslubidagi menyu bar  
+- 3D karta effektlari  
+- Floating Dock  
+- Kalendar vidjeti  
+- WiFi loader animatsiyasi  
+- Modal tizimi  
 - To‘liq Dark Mode  
-- CSS o‘zgaruvchilar orqali boshqariladi  
+- O‘zgaruvchilar orqali boshqariladigan tema  
+- Responsive Grid sistemasi  
 
 ---
 
-## 📦 Loyihaning Tuzilishi
-```
-modderui/
-│
-├── modderui.css
-└── demo/
-    └── index.html
-```
+## ⚙️ JS Xususiyatlari (ModderOS Core)
+- HTML bo‘lmasa ham menyularni avto-yaratish  
+- Xatosiz ishlaydigan null-check asosli kod  
+- Smart Context Menu (o‘ng bosishda joylashuvni aniqlash)  
+- Smart Edit Menu (matn tanlanganda chiqadi)  
+- Modal boshqaruvi  
+- Soat funksiyasi  
+- Parolni ko‘rsatish tugmasi  
+- Django CSRF qo‘llab-quvvatlashi  
+- Global UI tozalash mexanizmi  
 
 ---
 
-## 🚀 O‘rnatish
+# 🧭 Foydalanish
 
-### Variant 1 — HTML orqali ulash:
+## Glass Card:
 ```html
-<link rel="stylesheet" href="modderui.css">
+<section class="card">Salom ModderUI!</section>
 ```
 
-### Variant 2 — Django Static:
-```django
-<link href="{% static 'css/modderui.css' %}" rel="stylesheet">
-```
-
----
-
-## 🧪 Oddiy Foydalanish
-
-### Glass Card:
-```html
-<section class="card">
-    <h1>ModderUI ishga tushdi</h1>
-</section>
-```
-
-### Tugma:
+## Tugma:
 ```html
 <button class="primary">Davom etish</button>
 ```
 
-### Sidebar item:
+## Modal:
 ```html
-<div class="nav-item active">Bosh sahifa</div>
-```
-
-### Modal:
-```html
-<div class="modal-overlay active">
-    <div class="modal-content">
-        <h2>Sarlavha</h2>
-    </div>
-</div>
+<button onclick="toggleModal('modal1')">Ochish</button>
 ```
 
 ---
 
-## 🔥 Nega ModderUI?
-- Juda chiroyli, zamonaviy, premium UI  
-- ModderOS tizimlari uchun mos  
-- Kam kod bilan katta effekt  
-- Dashboard, admin panel, super app — hammasiga to‘g‘ri keladi  
-
----
-
-# 👨‍💻 Developer
-**Created by:** @modderboy  
-**Framework:** ModderUI v3.0  
-**License:** All rights reserved.
+# 👨‍💻 Developer  
+**Made with ❤️ by @modderboy**  
+ModderOS · ModderUI Ecosystem  
 
