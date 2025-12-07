@@ -59,9 +59,6 @@ modderui/
 ---
 <p align="center">
   <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_1.png" width="100%" />
-  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_2.png" width="100%" />
-  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_3.png" width="100%" />
-  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_5.png" width="100%" />
 </p>
 # 🚀 Installation
 
@@ -82,7 +79,9 @@ modderui/
 ```
 
 ---
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_2.png" width="100%" />
+</p>
 # 🧪 Usage Examples
 
 ## Glass Card
@@ -104,7 +103,9 @@ modderui/
     <div class="dock-icon">⚙️</div>
 </div>
 ```
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_3.png" width="100%" />
+</p>
 ## Context Menu (Auto Injected)
 No HTML needed.  
 The JS engine creates it automatically.
@@ -137,7 +138,9 @@ Generated if missing:
 - Copy  
 - Paste  
 - Cut  
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_5.png" width="100%" />
+</p>
 No HTML required — system engine handles everything.
 
 ---
