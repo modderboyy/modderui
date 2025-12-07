@@ -2,6 +2,9 @@
 ### **Deep Blue Liquid Glass UI Framework with Auto-Inject System Engine**  
 **Version:** 4.0  
 **Author:** @modderboy  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/modderui-banner.svg" width="100%" />
+</p>
 
 ModderUI is a next-generation Liquid Glass UI kit designed for premium dashboards, super-apps, and macOS/iOS-inspired systems.  
 ModderOS Core is the JavaScript engine that powers menus, modals, context actions, system clock, auto-inject features, and desktop-like interactions.
