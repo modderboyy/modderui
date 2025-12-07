@@ -57,7 +57,9 @@ modderui/
 ```
 
 ---
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_1.png" width="100%" />
+</p>
 # 🚀 Installation
 
 ### 1. Add CSS
