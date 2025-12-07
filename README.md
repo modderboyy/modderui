@@ -59,6 +59,9 @@ modderui/
 ---
 <p align="center">
   <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_1.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_2.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_3.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/modderboyy/modderui/main/Screenshot_5.png" width="100%" />
 </p>
 # 🚀 Installation
 
